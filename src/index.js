@@ -3,7 +3,8 @@
 const time = document.getElementById("time"),
   greeting = document.getElementById("greeting"),
   myName = document.getElementById("name"),
-  focus = document.getElementById("focus");
+  focus = document.getElementById("focus"),
+  spanAmPm = document.getElementById("am-pm");
 
 //   Show Time
 function showTime() {
@@ -20,7 +21,8 @@ function showTime() {
   hour = hour % 12 || 12;
 
   // Output Time
-  time.innerHTML = `${hour}<span>:</span>${addZero(min)}<span>:</span>${addZero(sec)}`;
+  time.innerHTML = `${hour}<span>:</span>${addZero(min)}<span>:</span>${addZero(sec)}  ${amPm}`;
+
   setTimeout(showTime, 1000);
 }
 
